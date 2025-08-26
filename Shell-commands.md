@@ -1,3 +1,5 @@
+BASIC SHELL COMMANDS
+
 date  ==> #checking date 
 pwd ==> #checking current directory
 ls ==> #listing files in directory
@@ -17,4 +19,11 @@ zcat ==> used to read zip files
 head filename ==> used to print top 5 lines from the file
 tail filename ==> used to print last 5 lines from the file
 tail -f filename ==> used to monitor the file continously if any new logs are added inside it
+more file_name ==> for quick access of a file
+less file_name ==> for detailed access of a file
+
+ADVANCE SHELL COMMANDS
+
+cp sourcefile destinationdr ==> copy the file in the directory
+
 
