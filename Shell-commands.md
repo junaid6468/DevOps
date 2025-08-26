@@ -1,0 +1,7 @@
+date  ==> #checking date 
+pwd ==> #checking current directory
+ls ==> #listing files in directory
+cd ==> #changing directory
+mkdir directory_name ==> #creating a directory
+ls -l ==> gives details about the file
+
