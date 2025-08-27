@@ -25,5 +25,18 @@ less file_name ==> for detailed access of a file
 ADVANCE SHELL COMMANDS
 
 cp sourcefile destinationdr ==> copy the file in the directory
+mv sourcefile destination ==> moves the file in the directory also used for renaming
+wc filename ==> gives content details of file like number of words e.t.c. \\ wc can be done for multiple files
+#soft-link
+ln -s path_of_file soft_link_file_name ==> creates a softlink file which is shortcut of the file given in path and this can be altered once created it is deleted once main file is deleted
+#hard-link
+ln path_of_file hard_link-file_name ==> create a hardlink file which is shortcut of the file give in the path and cannot be altered once created it remains as it is even if the actual file is deleted
+cut -b 1-n file_name ==> gives specific bytes of file as per requirement
+#tee
+echo "content" | tee file_name ==> used to print the content both on display and in the newfile
+sort filename ==> sorts the lines in file in alphabetical order
+diff file1 file2  ==> to check the difference between the files
+vi filename ==> opens file in vi editor
+
 
 
