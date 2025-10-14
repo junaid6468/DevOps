@@ -38,5 +38,94 @@ sort filename ==> sorts the lines in file in alphabetical order
 diff file1 file2  ==> to check the difference between the files
 vi filename ==> opens file in vi editor
 
+USER MANAGEMENT
+
+useradd - creates a use
+adduser - creates a user with home directory
+Cat /etc/passwd - to check if a user is created
+passwd user_name - setup a password for the mentioned user
+Cat /etc/gshadow - to check if password is setup(encrypted password can be seen)
+userdel - deletes an user 
+su - user_name - switch user
+
+Difference between useradd and adduser?
+useradd is simple way of creating a user without asking much information -- useful in shell scripting
+adduser takes a good amount of data about the user.
+
+Can we restore a forgotten password?
+Though we can get an encrypted password but we cannot get the actual password it is near to impossible to restore.
 
 
+chage -M 90 username - 90(days) used to set policies like to change the password for every 90 days in this case
+
+passwd -l username - used to lock a user account
+passwd -u username - used to unlock a user account 
+usermod -l new_username old_user_name - changes username
+
+GROUPS:
+
+groupadd name - used to create a group
+cat /etc/group - used to check the creation of the group
+usermod -aG group_name user_name - used to add user the a group
+
+ FILE PERMISSIONS:
+
+ R - read W - write X - execute
+Chmod u=rwx filename - permission to user
+Chmod o=rwx filename - permission to others
+Chmod g=rwx filename - permissions to group
+
+Chmod 777 filename 
+
+Same for directories or folder
+
+Chown owner:creator filename - changes to the desired owner
+
+
+PROCESS MANAGEMENT 
+
+VIEWING:
+
+ps - used to view the running processes by current user
+
+ps aux - used to view all the processes of all users
+
+ps aux | nl or ps aux | wc -l - to get the count of the running processes
+
+ps -ef - same use but does not shows the cpu and memory utilisation
+
+
+KILLING:
+
+kill pid - kills a process
+
+kill -9 pid - force kills the process
+
+kill -STOP pid - stops the process temporarily 
+
+kill -CONT pid - resumes the stopped process
+
+
+Priority and de-priority:
+
+Renice -n 10 -p pid -> it goes from -19 to 20.... -19 refers to high priority and 20 refers to low priority 
+
+MONITORING 
+
+top - used to get realtime data about all processes
+
+htop - same info as top but in a more good visual representation
+
+vmstat - reports the system performance
+
+Free -m - gives static info about memory usage 
+
+Free -h - gives static info in a human readable format
+
+nproc - gives number of cpus available 
+
+df -h - to check the disk space
+
+du -sh * - disk utilisation folder by folder
+
+iostat - display CPU and disk I/O statistics
