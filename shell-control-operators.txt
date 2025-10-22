@@ -1,0 +1,32 @@
+shell control operators
+1) && - used to combine two or commands 
+syntax: cmd1 && cmd2
+cmd2 runs only when cmd1 is succesfull
+usage:
+root@ubuntu-dev:/# mkdir junaid2 && cd /junaid2 && touch junaid.txt
+used && to make a directory/folder then change the pwd to the created folder and created a text file inside the directory
+
+2) || - used to run next commands only if the previous one fails
+syntax: cmd1 || cmd2
+cmd2 runs only if cmd1 fails
+usage: 
+root@ubuntu-dev:/junaid2# rmdir junaid2 || echo "cannot remove it please check"
+used rmdir to remove directory a directory while being inside it to throw and error then used || double pipe to handle it
+
+3) ; - used to run multiple commands sequentially, regardless of success or failure
+syntax: cmd1; cmd2; cmd3;
+usage:
+root@ubuntu-dev:/junaid2# ls; mkdir junaid1; pwd; cd junaid1
+listed all the files then created a directory then checked present working directory then changed the directory
+
+4) | - used to give output of the first command to second command as input
+syntax: cmd1 | cmd2
+usage:
+root@ubuntu-dev:/junaid2# ps | grep bash
+list of the running processes is passed to grep to fetch only bash
+
+5) || true - used to intentionally ignore the error
+syntax: cmd1 || true
+usage: root@ubuntu-dev:/junaid2# rm temp.txt || true 
+removing a non existing file will throw an error but this command will send a exit status code 0 which means command was run successfully  
+
