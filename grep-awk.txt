@@ -1,0 +1,44 @@
+Grep - global regular expression print
+Grep is used for pattern searching and matching. Useful in finding a particular pattern within a text file or files
+
+Command: grep [options] "pattern" [files]
+
+Usage : grep -i "king" short-story.txt
+
+Options:
+
+-i - searches for the pattern without case sensitivity (insensitive)
+-c - gives the count of the matches
+-w - searches for exact pattern without any prefixes and suffixes
+-n - gives line numbers against the matching patterns
+-v - searches for the lines which does not have the specified pattern
+-l - gives the file names with specified pattern
+-L - gives the file names which do not have specified pattern
+
+Commands practiced:
+
+grep "king" learn-grep.txt 
+grep "KIng" learn-grep.txt 
+grep -i "KIng" learn-grep.txt 
+grep -v "king" learn-grep.txt  
+grep -v "king" learn-grep.txt 
+grep -c "king" learn-grep.txt 
+grep -n "king" learn-grep.txt 
+grep -nw "king" learn-grep.txt 
+grep -nwi "king" learn-grep.txt 
+grep -w "king" learn-grep.txt 
+grep -l "junaid" *
+grep -L "junaid" *
+ls -ltr | grep "junaid"
+
+AWK - 
+awk is a powerful text-processing tool in Linux used to search, extract, and manipulate data from files or command outputs. DevOps engineers, system admins, and data analysts use it to quickly analyze logs, reports, and structured text without needing a full programming language.
+
+Command: awk 'condition {action}' filename
+
+Commands practiced:
+
+awk '$3 > 40 {print $1, $2}' info.txt 
+awk '{print "user:", $1 "has age:", $3}' info.txt 
+awk '{print $0}' info.txt 
+awk '{print $1, $2}' info.txt 
