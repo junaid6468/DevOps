@@ -1,0 +1,52 @@
+# Linux Commands Learned 
+
+1. Command Substitution — $( ... )
+
+Allows the output of a command to be used as an argument to another command.
+
+Example:
+
+
+echo "Today is $(date)"
+
+Explanation: Prints "Today is" followed by the current date and time.
+
+
+2. Redirections — <, 2>, &>
+
+Redirect input, output, and errors in commands.
+
+Examples:
+
+cat < config.txt | grep "text" file.txt 2> errors.log
+python script.py &> output.log
+
+Explanation:
+
+* `<` : Redirect input from a file.
+* `2>` : Redirect standard error to a file.
+* `&>` : Redirect both standard output and standard error to a file.
+
+
+3. Command Grouping — { ...; } and ( ... )
+
+Group multiple commands to execute together or redirect their output collectively.
+
+Example:
+
+{ echo "Starting"; uptime; } > log.txt
+
+
+Explanation: Executes both commands together and saves their combined output in `log.txt`.
+
+
+4. Brace Expansion — { ... }
+
+Generates multiple text strings or paths, useful for creating multiple files or directories at once.
+
+Example:
+
+mkdir project/{src,bin,docs}
+
+Explanation: Creates directories `project/src`, `project/bin`, and `project/docs` in one command.
+
